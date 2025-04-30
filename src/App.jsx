@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar.jsx";
 import {Hero} from "./components/Hero.jsx";
+import {Aicoach} from "./components/Aicoach.jsx";
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <div>
         <Navbar/>
         <Hero/>
+        <Aicoach/>
     </div>
   )
 }
