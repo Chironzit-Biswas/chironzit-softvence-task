@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "img": "src/imgaes/left_robot.png",
+    "tags": ["4Weeks","Beginner"],
+    "title": "Web Design Fundamentals",
+    "description": "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites."
+
+  },
+  {
+    "id": 2,
+    "img": "src/imgaes/left_robot.png",
+    "tags": ["4Weeks","Beginner"],
+    "title": "Web Design Fundamentals",
+    "description": "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites."
+
+  }
+]
