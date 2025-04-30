@@ -19,7 +19,7 @@ const Navbar = () => {
                     <a href="#achievements" className="text-gray-600 hover:text-blue-600">About</a>
                     <a href="#testimonials" className="text-gray-600 hover:text-blue-600">Pricing</a>
                     <a href="#faq" className="text-gray-600 hover:text-blue-600">Consulting</a>
-                    <a href="#faq" className="text-gray-600 hover:text-blue-600">Ai Coach</a>
+                    <a href="#faq" className="text-gray-600 hover:text-blue-600 ">Ai Coach</a>
                 </div>
 
                 {/* Buttons */}
