@@ -8,7 +8,7 @@ export const Aicoach = () => {
                          <h1 className={'text-[60px] text-white font-normal leading-[120%] mb-[60px]'}>Take a Suggestion Coaching </h1>
                      </div>
                      {/*Box*/}
-                     <div className={'bg-[#F2F3F3] flex flex-col justify-between mx-[28px] h-[577px] w-[883px] rounded-[20px]'}>
+                     <div className={'bg-[#F2F3F3] flex flex-col justify-between mx-[28px] h-[577px] w-[787px] rounded-[20px]'}>
 
                          <div className={'bg-white rounded-t-[12px] w-full '}>
                              <h1 className={'pt-[16px] pb-[24px] ml-[32px] text-[18px] leading-[120%] font-bold'}>AI
