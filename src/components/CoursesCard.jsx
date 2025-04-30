@@ -3,7 +3,7 @@ export const CoursesCard = ({coursesCard}) => {
     return (
         <div>
             <div className={'bg-[#F1F1F3] p-[50px] '}>
-                <img src={img} alt=""/>
+                <img className={'hover:scale-110 transition-all duration-300 ease-in-out'} src={img} alt=""/>
 
                 <div className={'flex justify-between items-center mt-[30px]'}>
                     <div className={'flex gap-4  '}>
@@ -14,8 +14,10 @@ export const CoursesCard = ({coursesCard}) => {
                 </div>
 
                 <h1 className={'pt-[30px] text-[24px] font-normal leading-[150%]'}>{title}</h1>
-                <p className={'pt-[14px] text-[18px] text-[#4C4C4D] leading-[150%]'}>{description}</p>
+                <p className={'pt-[14px] text-[18px] text-[#4C4C4D] leading-[150%] mb-[30px]'}>{description}</p>
+                <button className={'bg-[#002868] font-medium w-full py-[18px] text-white mb-[50px] leading-[150%] hover:bg-blue-800'}>Get it Now</button>
             </div>
+
         </div>
     )
 }
