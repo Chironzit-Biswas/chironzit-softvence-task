@@ -14,12 +14,12 @@ export const Courses = () => {
     return (
 
         <div className="w-[1920px] bg-[#FAFAFA] py-[30px]">
-            <div className="max-w-[1440px] mx-auto ">
+            <div className="md:max-w-[1440px] md:mx-auto px-[10px] ">
                 <div>
                     <h1 className={'text-[48px] font-semibold'}>Our Courses</h1>
                     <p className={'text-[18px] font-normal leading-[150%] w-[1010px] mb-[48px]'}>Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.</p>
                 </div>
-                <div className={'grid grid-cols-2 gap-[48px]'}>
+                <div className={'md:grid md:grid-cols-2  grid-cols-1 gap-[48px]'}>
                     {
                         courses.map(coursesCard => <CoursesCard coursesCard={coursesCard}></CoursesCard>)
                     }

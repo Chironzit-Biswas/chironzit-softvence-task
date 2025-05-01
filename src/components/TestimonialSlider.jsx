@@ -32,12 +32,12 @@ export default function TestimonialSlider() {
     const prev = () => setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
     return (
-        <div className="w-[1920px] mx-auto px-[80px] flex flex-col justify-center items-center py-[115px] ">
-            <div className={'w-[1280px]'}>
-                <p className="text-[36px]  font-semibold italic text-gray-800 mb-6">
+        <div className="md:w-[1920px] md:mx-auto md:px-[80px] flex flex-col justify-center items-center md:py-[115px] w-[450px] px-[10px] ">
+            <div className={'md:w-[1280px]'}>
+                <p className="md:text-[36px] text-[22px] font-semibold italic text-gray-800 mb-6">
                     “{testimonials[index].text}”
                 </p>
-                <div className={' flex justify-between px-[80px] '}>
+                <div className={' flex justify-between md:px-[80px] px-[10px] '}>
                     <div className="text-left flex items-center gap-3 justify-center mb-4">
                         <div className="w-[70px] h-[70px] bg-gray-300 rounded-full"></div>
                         <div className={'mt-[70px]'}>
@@ -45,7 +45,7 @@ export default function TestimonialSlider() {
                             <p className="text-sm text-gray-500">{testimonials[index].role}</p>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center space-x-4 mt-4">
+                    <div className="flex items-center justify-center  md:space-x-4 mt-4">
                         <button
                             onClick={prev}
                             className=" border rounded-full hover:bg-gray-200 transition"

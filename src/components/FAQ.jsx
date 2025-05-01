@@ -31,10 +31,10 @@ export default function FAQ() {
 
     return (
         <div className={' max-w-[1920px] '}>
-            <div className="w-[1440px] mx-auto mt-10 px-4 py-10">
-                <p className={'text-[24px] text-[#001C4A] font-normal w-[280px]'}>Frequently asked questions</p>
-                <div className={'flex flex-col justify-center items-center'}>
-                    <h2 className="text-[60px] text-center mx-[180px] leading-[120%] font-bold mb-[80px] ">
+            <div className="w-[1440px] md:mx-auto mt-10 py-10">
+                <p className={'text-[24px] mx-[10px] text-[#001C4A] font-normal  w-[280px]'}>Frequently asked questions</p>
+                <div className={'md:flex flex-col justify-center items-center'}>
+                    <h2 className="md:text-[60px] mt-5 mx-[10px] text-left text-[30px] w-[400px] md:w-[800px] lg:w-[1000px] md:text-center md:mx-[180px] leading-[120%] font-bold mb-[80px] ">
                         Constant collaboration is how we roll. Let's see if we are a good fit.
                     </h2>
                 </div>
@@ -43,24 +43,24 @@ export default function FAQ() {
                         <div key={faq.id} className="border-b border-[#CCCCCC] pb-4">
                             <button
                                 onClick={() => toggle(faq.id)}
-                                className="w-full text-left flex justify-between items-center">
+                                className="md:w-full text-left flex justify-between items-center">
 
                                 <div>
-                                 <span className="text-[#8B7D4C] px-5  text-[32px] text-sm font-medium ">
+                                 <span className="text-[#8B7D4C] md:px-5 px-[10px] text-[25px] md:text-[32px] text-sm font-medium ">
                                           {String(faq.id).padStart(2, "0")}
                                  </span>
-                                    <span className="text-base text-[40px] font-medium text-gray-800">
+                                    <span className=" md:text-[40px] text-[20px] font-medium text-gray-800">
                                          {faq.question}
                                  </span>
 
                                 </div>
-                                <span className="text-[40px] text-gray-600">
+                                <span className="md:text-[40px] text-[20px] text-gray-600">
                 {openId === faq.id ? "−" : "+"}
               </span>
 
                             </button>
                             {openId === faq.id && (
-                                <p className="mt-3 mx-[80px] text-[16px] leading-[140%] text-gray-500">{faq.answer}</p>
+                                <p className="mt-3 mx-[10px] md:mx-[80px] text-[16px] w-1/2 leading-[140%] text-gray-500">{faq.answer}</p>
                             )}
                         </div>
                     ))}

@@ -15,15 +15,15 @@ export default function Footer() {
                     <button className={'bg-[#FCE38A] px-[36px] py-[16px] rounded-[50px] mt-[48px]'}>Join Now</button>
                 </div>
 
-                <div className=" max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-6 mt-[112px] gap-8">
+                <div className="max-w-[1440px] grid mx-[520px] md:mx-auto grid-cols-1 md:grid-cols-6 mt-[112px] gap-8">
 
 
                     {/* Logo and Description */}
                     <div className={'md:col-span-3'}>
-                        <div className="flex items-center mb-4">
+                        <div className="md:flex items-center mb-4">
                             <img src={footerlogo} alt=""/>
                         </div>
-                        <p className="text-[14px] w-[534px] h-[120px] ">
+                        <p className="text-[14px] md:w-[534px] md:h-[120px] w-[370px]">
                             SalesRank.AI offers a comprehensive suite of AI-powered solutions to help you find expert
                             sales
                             professionals who can elevate every aspect of your business. From performance rankings and
