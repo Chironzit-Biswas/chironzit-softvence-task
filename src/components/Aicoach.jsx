@@ -52,12 +52,12 @@ export const Aicoach = () => {
                      </div>
                  </div>
 
-                  <div>
-                      <MdOutlineRestartAlt />
-                      <AiOutlineLike />
-                      <AiOutlineDislike />
-                      <IoClipboardOutline />
-                      <IoVolumeHighOutline />
+                  <div className={'bg-white md:h-[60%] mx-auto gap-10 md:w-[40px] p-[8px] rounded-xl md:flex-col flex md:mt-[280px] m-5'}>
+                      <MdOutlineRestartAlt className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
+                      <AiOutlineLike className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
+                      <AiOutlineDislike className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
+                      <IoClipboardOutline className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
+                      <IoVolumeHighOutline className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
                   </div>
 
 
@@ -89,8 +89,14 @@ export const Aicoach = () => {
                      <div className="bg-white text-black rounded-xl p-4 shadow-lg">
                          <h3 className="text-lg font-semibold">Quick Actions</h3>
                          <div className="mt-2 grid grid-cols-2 gap-2">
-                             <button className="bg-blue-600 text-white rounded-lg py-2">Generate Script</button>
-                             <button className="bg-blue-600 text-white rounded-lg py-2">Practice Pitch</button>
+                             <div className={'flex'}>
+                                 <img src={graph} alt=""/>
+                                 <p className="text-[#171D25] font-medium">Confidence Level</p>
+                             </div>
+                             <div className={'flex'}>
+                                 <img src={graph} alt=""/>
+                                 <p className="text-[#171D25] font-medium">Confidence Level</p>
+                             </div>
                          </div>
                      </div>
                  </div>
