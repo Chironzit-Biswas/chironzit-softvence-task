@@ -25,16 +25,6 @@ export const Courses = () => {
         }
     ]
 
-
-
-    // const [courses, setCourses] = useState([])
-    //
-    // useEffect(() => {
-    //     fetch('coursedetails.json')
-    //         .then(res => res.json())
-    //         .then(data => setCourses(data))
-    // }, []);
-
     return (
 
         <div className="w-[1920px] bg-[#FAFAFA] py-[30px]" id={'consulting'}>

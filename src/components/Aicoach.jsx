@@ -1,4 +1,4 @@
-import circle from '../imgaes/circle.png'
+
 import graph from '../imgaes/graph.png'
 import quickLeft from '../imgaes/QuickLeft.png'
 import quickRight from '../imgaes/quickRight.png'
@@ -42,10 +42,7 @@ export const Aicoach = () => {
                          </div>
 
                          <div className={'md:px-[28px] px-[10px] '}>
-                             {/*<div className={'md:flex  gap-4 md:mt-[-180px]'}>*/}
-                             {/*        <img className={'h-[40px] w-[40px]'} src={circle} alt="circle"/>*/}
-                             {/*    <p className={'py-[8px] md:px-[24px] bg-white  md:w-[630px]'}>Hello! I'm your AI sales coach. How can I help you improve your sales performance today?</p>*/}
-                             {/*</div>*/}
+
 
                              <div className="flex-1 overflow-y-auto
                               space-y-2 mt-[-150px]">
