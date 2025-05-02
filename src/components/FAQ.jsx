@@ -30,7 +30,7 @@ export default function FAQ() {
     };
 
     return (
-        <div className={' max-w-[1920px] '}>
+        <div className={' max-w-[1920px] '} id={'about'}>
             <div className="w-[1440px] md:mx-auto mt-10 py-10">
                 <p className={'text-[24px] mx-[10px] text-[#001C4A] font-normal  w-[280px]'}>Frequently asked questions</p>
                 <div className={'md:flex flex-col justify-center items-center'}>

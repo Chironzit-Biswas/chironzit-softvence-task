@@ -4,7 +4,7 @@ import midIcon from '../imgaes/atr.png'
 import bigrobot from '../imgaes/image.png'
 export const Hero = () => {
     return (
-        <div className="md:w-[1920px] bg-[#FAFAFA] py-[30px]">
+        <div className="md:w-[1920px] bg-[#FAFAFA] py-[30px]" id={'home'}>
             <div className="max-w-[1440px] mx-auto px-4 py-4 flex items-center justify-between">
 
                 {/*right side*/}

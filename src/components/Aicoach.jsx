@@ -1,17 +1,32 @@
 import circle from '../imgaes/circle.png'
 import graph from '../imgaes/graph.png'
+import quickLeft from '../imgaes/QuickLeft.png'
+import quickRight from '../imgaes/quickRight.png'
 
 import { MdOutlineRestartAlt } from "react-icons/md";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { IoClipboardOutline } from "react-icons/io5";
 import { IoVolumeHighOutline } from "react-icons/io5";
+import {useState} from "react";
 
 export const Aicoach = () => {
 
 
+    const [query, setQuery] = useState('');
+    const [messages, setMessages] = useState([
+        { type: 'bot', text: "Hello! I'm your AI sales coach. How can I help you improve your sales performance today?" },
+    ]);
+
+
+    const handleSend = () => {
+        if (!query.trim()) return;
+        setMessages([...messages, { type: 'user', text: query }]);
+        setQuery('');
+    };
+
     return (
-        <div className="md:w-[1920px] px-[10px] py-[30px] bg-blue-700 ">
+        <div className="md:w-[1920px] px-[10px] py-[30px] bg-blue-700 " id={'aicoach'}>
              <div className="md:max-w-[1440px] md:mx-auto md:flex ">
                  <div>
                      <div className={''}>
@@ -26,36 +41,63 @@ export const Aicoach = () => {
                                  Sales Coach</h1>
                          </div>
 
-                         <div className={'md:px-[28px] px-[10px]'}>
-                             <div className={'md:flex  gap-4 md:mt-[-180px]'}>
-                                     <img className={'h-[40px] w-[40px]'} src={circle} alt="circle"/>
-                                 <p className={'py-[8px] md:px-[24px] bg-white  md:w-[630px]'}>Hello! I'm your AI sales coach. How can I help you improve your sales performance today?</p>
+                         <div className={'md:px-[28px] px-[10px] '}>
+                             {/*<div className={'md:flex  gap-4 md:mt-[-180px]'}>*/}
+                             {/*        <img className={'h-[40px] w-[40px]'} src={circle} alt="circle"/>*/}
+                             {/*    <p className={'py-[8px] md:px-[24px] bg-white  md:w-[630px]'}>Hello! I'm your AI sales coach. How can I help you improve your sales performance today?</p>*/}
+                             {/*</div>*/}
+
+                             <div className="flex-1 overflow-y-auto
+                              space-y-2 mt-[-150px]">
+                                 {messages.map((msg, idx) => (
+                                     <div
+                                         key={idx}
+                                         className={`p-3 rounded-lg max-w-[75%] ${
+                                             msg.type === 'bot' ? 'bg-gray-200 self-start' : 'bg-blue-500 text-white self-end overflow-hidden'
+                                         }`}
+                                     >
+                                         {msg.text}
+                                     </div>
+                                 ))}
                              </div>
+
                          </div>
 
                          <div>
-                             <div className={'flex w-full md:mx-[28px] px-[10px] md:gap-[8px]'}>
-                                 <p className={'bg-[#00286814] w-[100px] md:w-[200px] rounded-[36px] md:py-[12px] text-center text-blue-500 md:text-[14px] text-[12px]'}>How
-                                     do I handle objections?</p>
-                                 <p className={'bg-[#00286814] w-[100px] md:w-[200px] rounded-[36px] md:py-[12px] text-center text-blue-500 md:text-[14px] text-[12px]'}>How
-                                     do I handle objections?</p>
-                                 <p className={'bg-[#00286814] w-[100px] md:w-[200px] rounded-[36px] md:py-[12px] text-center text-blue-500 md:text-[14px] text-[12px]'}>How
-                                     do I handle objections?</p>
-                                 <p className={'bg-[#00286814] w-[100px] md:w-[200px] rounded-[36px] md:py-[12px] text-center text-blue-500 md:text-[14px] text-[12px]'}>How
-                                     do I handle objections?</p>
+
+                             <div className="mt-2 flex flex-wrap gap-2 text-blue-500">
+                                 {['How do I handle objections?', 'Give me a cold email template', 'Closing techniques', 'Negotiation tips'].map((text) => (
+                                     <button
+                                         key={text}
+                                         onClick={() => setQuery(text)}
+                                         className="bg-gray-200 text-sm px-2 py-1 rounded hover:bg-gray-200"
+                                     >
+                                         {text}
+                                     </button>
+                                 ))}
                              </div>
+
+
                              <div className={'md:flex w-full px-[28px] py-[16px] gap-[12px]'}>
-                                 <input  className={'rounded-xl border-[#E5E7EB] border-[1px] px-[24px] py-[17px] md:w-[800px] h-[48px]'} placeholder={'Ask anything you need'} type="text" name="" id=""/>
-                                 <button className={'bg-[#002868] w-[100px] h-[48px] rounded-[8px] text-white'}>Send</button>
+                                 <input
+                                     type="text"
+                                     value={query}
+                                     onChange={(e) => setQuery(e.target.value)}
+                                     className={'rounded-xl border-[#E5E7EB] border-[1px] px-[24px] py-[17px] md:w-[800px] h-[48px]'}
+                                     placeholder={'Ask anything you need'} type="text" name="" id=""/>
+                                 <button onClick={handleSend}
+                                         className={'bg-[#002868] w-[100px] h-[48px] rounded-[8px] text-white'}>Send
+                                 </button>
                              </div>
                          </div>
                      </div>
                  </div>
 
-                  <div className={'bg-white md:h-[60%] mx-auto gap-10 md:w-[40px] p-[8px] rounded-xl md:flex-col flex md:mt-[280px] m-5'}>
-                      <MdOutlineRestartAlt className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
-                      <AiOutlineLike className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
-                      <AiOutlineDislike className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
+                 <div
+                     className={'bg-white md:h-[60%]  mx-auto gap-5 md:w-[40px] p-[8px] rounded-xl md:flex-col flex md:mt-[280px] m-5'}>
+                     <MdOutlineRestartAlt className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
+                     <AiOutlineLike className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
+                     <AiOutlineDislike className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
                       <IoClipboardOutline className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
                       <IoVolumeHighOutline className={'md:mt-[30px] hover:bg-blue-700 rounded-full text-2xl'}/>
                   </div>
@@ -86,16 +128,16 @@ export const Aicoach = () => {
                      </div>
 
                      {/* Quick Actions */}
-                     <div className="bg-white text-black rounded-xl p-4 shadow-lg">
+                     <div className="bg-[#E7E7E7] text-black rounded-xl p-4 shadow-lg">
                          <h3 className="text-lg font-semibold">Quick Actions</h3>
-                         <div className="mt-2 grid grid-cols-2 gap-2">
-                             <div className={'flex'}>
-                                 <img src={graph} alt=""/>
+                         <div className="mt-2 grid grid-cols-2 gap-2 bg-white">
+                             <div className={'flex flex-col bg-white'}>
+                                 <img className={'h-[28px] w-[28px] bg-white'} src={quickLeft} alt=""/>
                                  <p className="text-[#171D25] font-medium">Confidence Level</p>
                              </div>
-                             <div className={'flex'}>
-                                 <img src={graph} alt=""/>
-                                 <p className="text-[#171D25] font-medium">Confidence Level</p>
+                             <div className={'flex flex-col bg-white m-2'}>
+                                 <img className={'h-[28px] w-[28px]'} src={quickRight} alt=""/>
+                                 <p className="text-[#171D25] font-medium">Practice Pitch</p>
                              </div>
                          </div>
                      </div>

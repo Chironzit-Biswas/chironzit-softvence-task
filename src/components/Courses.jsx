@@ -13,7 +13,7 @@ export const Courses = () => {
 
     return (
 
-        <div className="w-[1920px] bg-[#FAFAFA] py-[30px]">
+        <div className="w-[1920px] bg-[#FAFAFA] py-[30px]" id={'consulting'}>
             <div className="md:max-w-[1440px] md:mx-auto px-[10px] ">
                 <div>
                     <h1 className={'text-[48px] font-semibold'}>Our Courses</h1>
