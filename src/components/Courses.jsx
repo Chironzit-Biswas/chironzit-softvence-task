@@ -1,15 +1,39 @@
-import {useEffect, useState} from "react";
+import left_robot from '../imgaes/left_robot.png'
+import right_robot from '../imgaes/right_robot.png'
 import {CoursesCard} from "./CoursesCard.jsx";
+
 
 export const Courses = () => {
 
-    const [courses, setCourses] = useState([])
+    const courses =[
 
-    useEffect(() => {
-        fetch('coursedetails.json')
-            .then(res => res.json())
-            .then(data => setCourses(data))
-    }, []);
+        {
+            "id": 1,
+            "img": left_robot,
+            "tags": ["4Weeks","Beginner"],
+            "title": "Web Design Fundamentals",
+            "description": "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites."
+
+        },
+        {
+            "id": 2,
+            "img": right_robot,
+            "tags": ["4Weeks","Beginner"],
+            "title": "Web Design Fundamentals",
+            "description": "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites."
+
+        }
+    ]
+
+
+
+    // const [courses, setCourses] = useState([])
+    //
+    // useEffect(() => {
+    //     fetch('coursedetails.json')
+    //         .then(res => res.json())
+    //         .then(data => setCourses(data))
+    // }, []);
 
     return (
 
